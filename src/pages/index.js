@@ -152,9 +152,9 @@ const IndexPage = () => (
       <SkillBar name={"AGILE"} procent={"85"}></SkillBar>
       <h2>project experience</h2>
       <div>
-        DPG Media - Nobel Biocare - ABVV/FGTB - Digipolis Antwerpen - Spectr
+        DPG Media - Nobel Biocare - ABVV/FGTB - Digipolis Antwerpen - Cronos - Spectr
       </div>
-      <h2>meetup's i am interested in</h2>
+      <h2>meetups i like to participate to</h2>
       <div>
         AWS User Group Belgium - Angular Belgium - DigAnt Café - DPG Media Tech Talks - jsbe.io
       </div>
