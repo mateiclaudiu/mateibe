@@ -104,7 +104,7 @@ const Iam = () => (
     <Typewriter
       style={{ float: `left` }}
       options={{
-        strings: ["JAVA DEVELOPER", "JS DEVELOPER", "PIANIST"],
+        strings: ["A DEVELOPER", "A PROUD HUSBAND", "A PIANO PLAYER"],
         autoStart: true,
         loop: true,
         delay: "natural",
@@ -116,7 +116,7 @@ const Iam = () => (
 const IntroBlock = (children) => (
   <div style={IntroBlockStyle}>
     <TextContainer>
-      <h1 style={{ color: "#d87679", fontFamily: `'Poppins', sans-serif` }}>i am claudiu matei</h1>
+      <h1 style={{ color: "#d87679", fontFamily: `'Poppins', sans-serif` }}>i am claudiu matei<MyDot>.</MyDot></h1>
       <Iam/>
     </TextContainer>
   </div>
@@ -129,6 +129,15 @@ const SkillBar = ({ name, procent }) => (
       <span style={{ width: procent + "%" }}><span className="progress"></span></span>
     </div>
   </div>
+)
+
+const MyDot = styled.span`
+  color: #d97578;
+  font-family: sans-serif;
+`
+
+const MyH2 = ({title}) => (
+  <h2>{ title } <MyDot>.</MyDot></h2>
 )
 
 const colors = {
@@ -145,7 +154,7 @@ const IndexPage = () => (
     <IntroBlock/>
     <Bar>JAVA - JAVASCRIPT - REACT - ANGULAR - SPRINGBOOT - AWS - AGILE</Bar>
     <TextContainer>
-      <h2>what i do</h2>
+      <MyH2 title={"what i do"}/>
       <p>
         As a full stack developer I like to translate the needs of the customer into code using new technologies. I find a pleasure in helping people and
         looking for new solutions, by taking initiative and stepping out of my comfort zone. I love to be challenged and work on projects where I can use and
@@ -155,11 +164,11 @@ const IndexPage = () => (
       <SkillBar name={"JAVASCRIPT"} procent={"70"}/>
       <SkillBar name={"AWS"} procent={"80"}/>
       <SkillBar name={"AGILE"} procent={"85"}/>
-      <h2>project experience</h2>
+      <MyH2 title={"project experience"}/>
       <div style={{
         display: "flex",
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
       }}>
         <ProjectImg> <img src={require("../images/dpg-media.svg")} alt="dpg-media"/></ProjectImg>
         <ProjectImg> <img src={require("../images/nobel-biocare.png")} alt="nobel-biocare"/></ProjectImg>
@@ -168,7 +177,7 @@ const IndexPage = () => (
         <ProjectImg> <img src={require("../images/cronos-groep.png")} alt="cronos-groep"/></ProjectImg>
         <ProjectImg> <img src={require("../images/de-juristen.jpg")} alt="de-juristen"/></ProjectImg>
       </div>
-      <h2>meetups i like to participate to</h2>
+      <MyH2 title={"meetups where we could meet up"}/>
       <div>
         AWS User Group Belgium - Angular Belgium - DigAnt Café - DPG Media Tech Talks - jsbe.io
       </div>
