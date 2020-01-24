@@ -10,7 +10,7 @@ import SkillBar from "react-skillbars"
 
 import Typewriter from "typewriter-effect"
 
-import { LandingStyles } from "./styles"
+import { LandingStyles } from "../components/styles"
 
 const Container = styled.div`
   margin: 3rem auto;
