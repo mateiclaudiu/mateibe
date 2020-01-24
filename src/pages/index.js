@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const ProjectImg = styled.div`
   width: 20%;
-  padding:3%;
+  padding:0 2% 0 2%;
 `
 
 const IndexPage2 = () => (
@@ -47,30 +47,23 @@ const TextContainer = ({ children }) => (
   </div>
 )
 
-const skills = [
-  { type: "Java", level: 90 },
-  { type: "Agile", level: 90 },
-  { type: "Javascript", level: 75 },
-  { type: "AWS", level: 75 },
-  { type: "Angular", level: 65 },
-  { type: "React", level: 60 },
-]
+const LinkedInButton = styled.div`
+  padding: 0.4rem 0.2rem;
+  width: 11rem;
+  background: rgb(0, 115, 177);
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  font-family: 'Muli', sans-serif;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+`
 
 const LinkedInContact = () => (
-  <div style={{
-    padding: "0.4rem 0.2rem",
-    width: "11rem",
-    background: "rgb(0, 115, 177)",
-    color: "white",
-    textAlign: "center",
-    borderRadius: "2px",
-    fontFamily: `'Muli', sans-serif`,
-    position: "fixed",
-    bottom: 0,
-    right: 0,
-  }}>
+  <LinkedInButton>
     <a style={{ textDecoration: "none", color: "white" }} href="https://www.linkedin.com/in/claudiumatei/" target="_blank">Contact me on LinkedIn</a>
-  </div>
+  </LinkedInButton>
 )
 
 const Bar = ({ children }) => (
@@ -136,8 +129,8 @@ const MyDot = styled.span`
   font-family: sans-serif;
 `
 
-const MyH2 = ({title}) => (
-  <h2>{ title } <MyDot>.</MyDot></h2>
+const MyH2 = ({ title }) => (
+  <h2>{title} <MyDot>.</MyDot></h2>
 )
 
 const colors = {
@@ -177,7 +170,15 @@ const IndexPage = () => (
         <ProjectImg> <img src={require("../images/cronos-groep.png")} alt="cronos-groep"/></ProjectImg>
         <ProjectImg> <img src={require("../images/de-juristen.jpg")} alt="de-juristen"/></ProjectImg>
       </div>
-      <MyH2 title={"meetups where we could meet up"}/>
+      <div style={{
+        display: "flex",
+        alignItems: "center"
+
+      }}>
+        <h2>meetups where we could </h2>
+        <img style={{width: '10%', margin: '0 0 0 7px'}} src={require("../images/meetup.svg")} alt="dpg-media"/>
+        <MyDot style={{fontSize:'2.2rem'}}>.</MyDot>
+      </div>
       <div>
         AWS User Group Belgium - Angular Belgium - DigAnt Café - DPG Media Tech Talks - jsbe.io
       </div>
