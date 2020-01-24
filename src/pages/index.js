@@ -17,6 +17,11 @@ const Container = styled.div`
   justify-content: center;
 `
 
+const ProjectImg = styled.div`
+  width: 20%;
+  padding:3%;
+`
+
 const IndexPage2 = () => (
   <Layout>
     <SEO title="Home"/>
@@ -117,11 +122,11 @@ const IntroBlock = (children) => (
   </div>
 )
 
-const SkillBar = ({name, procent}) => (
-  <div style={{marginTop:"15px"}}>
+const SkillBar = ({ name, procent }) => (
+  <div style={{ marginTop: "15px" }}>
     {name}
     <div className="meter">
-      <span style={{ width: procent+"%" }}><span className="progress"></span></span>
+      <span style={{ width: procent + "%" }}><span className="progress"></span></span>
     </div>
   </div>
 )
@@ -146,20 +151,29 @@ const IndexPage = () => (
         looking for new solutions, by taking initiative and stepping out of my comfort zone. I love to be challenged and work on projects where I can use and
         improve my existing skills.
         Besides my technical skills I am also an empathic listener and persuasive speaker. </p>
-      <SkillBar name={"JAVA"} procent={"90"}></SkillBar>
-      <SkillBar name={"JAVASCRIPT"} procent={"70"}></SkillBar>
-      <SkillBar name={"AWS"} procent={"80"}></SkillBar>
-      <SkillBar name={"AGILE"} procent={"85"}></SkillBar>
+      <SkillBar name={"JAVA"} procent={"90"}/>
+      <SkillBar name={"JAVASCRIPT"} procent={"70"}/>
+      <SkillBar name={"AWS"} procent={"80"}/>
+      <SkillBar name={"AGILE"} procent={"85"}/>
       <h2>project experience</h2>
-      <div>
-        DPG Media - Nobel Biocare - ABVV/FGTB - Digipolis Antwerpen - Cronos - Spectr
+      <div style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center"
+      }}>
+        <ProjectImg> <img src={require("../images/dpg-media.svg")} alt="dpg-media"/></ProjectImg>
+        <ProjectImg> <img src={require("../images/nobel-biocare.png")} alt="nobel-biocare"/></ProjectImg>
+        <ProjectImg> <img src={require("../images/ABVV-FGTB.png")} alt="ABVV-FGTB"/></ProjectImg>
+        <ProjectImg> <img src={require("../images/digipolis.png")} alt="digipolis"/></ProjectImg>
+        <ProjectImg> <img src={require("../images/cronos-groep.png")} alt="cronos-groep"/></ProjectImg>
+        <ProjectImg> <img src={require("../images/de-juristen.jpg")} alt="de-juristen"/></ProjectImg>
       </div>
       <h2>meetups i like to participate to</h2>
       <div>
         AWS User Group Belgium - Angular Belgium - DigAnt Café - DPG Media Tech Talks - jsbe.io
       </div>
     </TextContainer>
-    <LinkedInContact></LinkedInContact>
+    <LinkedInContact/>
   </div>
 )
 
