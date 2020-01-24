@@ -6,11 +6,14 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import SkillBar from "react-skillbars"
-
 import Typewriter from "typewriter-effect"
 
 import { LandingStyles } from "../components/styles"
+const skillsmodule = typeof window !== `undefined` ? require("react-skillbars") : null
+
+
+//import SkillBar from "react-skillbars"
+
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -141,7 +144,7 @@ const IndexPage = () => (
         looking for new solutions, by taking initiative and stepping out of my comfort zone. I love to be challenged and work on projects where I can use and
         improve my existing skills.
         Besides my technical skills I am also an empathic listener and persuasive speaker. </p>
-      <SkillBar skills={skills} colors={colors} animationDelay={15}/>
+      <skillsmodule skills={skills} colors={colors} animationDelay={15}/>
       <h2>project experience</h2>
       <div>
         DPG Media - Nobel Biocare - ABVV/FGTB - Digipolis Antwerpen - Spectr
