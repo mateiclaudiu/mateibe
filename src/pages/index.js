@@ -5,15 +5,8 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-
 import Typewriter from "typewriter-effect"
-
 import { LandingStyles } from "../components/styles"
-const skillsmodule = typeof window !== `undefined` ? require("react-skillbars") : null
-
-
-//import SkillBar from "react-skillbars"
-
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -69,7 +62,7 @@ const LinkedInContact = () => (
     fontFamily: `'Muli', sans-serif`,
     position: "fixed",
     bottom: 0,
-    right: 0
+    right: 0,
   }}>
     <a style={{ textDecoration: "none", color: "white" }} href="https://www.linkedin.com/in/claudiumatei/" target="_blank">Contact me on LinkedIn</a>
   </div>
@@ -100,11 +93,11 @@ const Iam = () => (
   <div style={{
     fontSize: `5rem`,
     marginTop: `7rem`,
+    display: `flex`,
 
   }}>
-    <p style={{ float: `left` }}>I AM&nbsp;</p>
+    <div>I AM&nbsp;</div>
     <Typewriter
-      style={{ float: `left` }}
       options={{
         strings: ["JAVA DEVELOPER", "JS DEVELOPER", "PIANIST"],
         autoStart: true,
@@ -121,6 +114,15 @@ const IntroBlock = (children) => (
       <h1 style={{ color: "#d87679", fontFamily: `'Poppins', sans-serif` }}>i am claudiu matei</h1>
       <Iam/>
     </TextContainer>
+  </div>
+)
+
+const SkillBar = ({name, procent}) => (
+  <div style={{marginTop:"15px"}}>
+    {name}
+    <div className="meter">
+      <span style={{ width: procent+"%" }}><span className="progress"></span></span>
+    </div>
   </div>
 )
 
@@ -144,7 +146,10 @@ const IndexPage = () => (
         looking for new solutions, by taking initiative and stepping out of my comfort zone. I love to be challenged and work on projects where I can use and
         improve my existing skills.
         Besides my technical skills I am also an empathic listener and persuasive speaker. </p>
-      <skillsmodule skills={skills} colors={colors} animationDelay={15}/>
+      <SkillBar name={"JAVA"} procent={"90"}></SkillBar>
+      <SkillBar name={"JAVASCRIPT"} procent={"70"}></SkillBar>
+      <SkillBar name={"AWS"} procent={"80"}></SkillBar>
+      <SkillBar name={"AGILE"} procent={"85"}></SkillBar>
       <h2>project experience</h2>
       <div>
         DPG Media - Nobel Biocare - ABVV/FGTB - Digipolis Antwerpen - Spectr
