@@ -116,7 +116,11 @@ const IntroBlock = (children) => (
 )
 
 const SkillBar = ({ name, procent }) => (
-  <div style={{ marginTop: "15px" }}>
+  <div style={{
+    marginTop: "15px",
+    fontSize: "0.7rem",
+    fontWeight: "lighter"
+  }}>
     {name}
     <div className="meter">
       <span style={{ width: procent + "%" }}><span className="progress"></span></span>
@@ -153,10 +157,13 @@ const IndexPage = () => (
         looking for new solutions, by taking initiative and stepping out of my comfort zone. I love to be challenged and work on projects where I can use and
         improve my existing skills.
         Besides my technical skills I am also an empathic listener and persuasive speaker. </p>
-      <SkillBar name={"JAVA"} procent={"90"}/>
-      <SkillBar name={"JAVASCRIPT"} procent={"70"}/>
+      <SkillBar name={"JAVA"} procent={"93"}/>
+      <SkillBar name={"JAVASCRIPT"} procent={"85"}/>
       <SkillBar name={"AWS"} procent={"80"}/>
-      <SkillBar name={"AGILE"} procent={"85"}/>
+      <SkillBar name={"SCRUM"} procent={"95"}/>
+      <SkillBar name={"ANGULAR"} procent={"85"}/>
+      <SkillBar name={"REACT"} procent={"75"}/>
+      <SkillBar name={"SQL"} procent={"75"}/>
       <MyH2 title={"project experience"}/>
       <div style={{
         display: "flex",
@@ -165,19 +172,19 @@ const IndexPage = () => (
       }}>
         <ProjectImg> <img src={require("../images/dpg-media.svg")} alt="dpg-media"/></ProjectImg>
         <ProjectImg> <img src={require("../images/nobel-biocare.png")} alt="nobel-biocare"/></ProjectImg>
-        <ProjectImg> <img src={require("../images/ABVV-FGTB.png")} alt="ABVV-FGTB"/></ProjectImg>
         <ProjectImg> <img src={require("../images/digipolis.png")} alt="digipolis"/></ProjectImg>
+        <ProjectImg> <img src={require("../images/ABVV-FGTB.png")} alt="ABVV-FGTB"/></ProjectImg>
         <ProjectImg> <img src={require("../images/cronos-groep.png")} alt="cronos-groep"/></ProjectImg>
         <ProjectImg> <img src={require("../images/de-juristen.jpg")} alt="de-juristen"/></ProjectImg>
       </div>
       <div style={{
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
 
       }}>
         <h2>meetups where we could </h2>
-        <img style={{width: '10%', margin: '0 0 0 7px'}} src={require("../images/meetup.svg")} alt="dpg-media"/>
-        <MyDot style={{fontSize:'2.2rem'}}>.</MyDot>
+        <img style={{ width: "10%", margin: "0 0 0 7px" }} src={require("../images/meetup.svg")} alt="dpg-media"/>
+        <MyDot style={{ fontSize: "2.2rem" }}>.</MyDot>
       </div>
       <div>
         AWS User Group Belgium - Angular Belgium - DigAnt Café - DPG Media Tech Talks - jsbe.io
