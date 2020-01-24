@@ -93,11 +93,11 @@ const Iam = () => (
   <div style={{
     fontSize: `5rem`,
     marginTop: `7rem`,
-    display: `flex`,
 
   }}>
-    <div>I AM&nbsp;</div>
+    <div style={{ float: `left` }}>I AM&nbsp;</div>
     <Typewriter
+      style={{ float: `left` }}
       options={{
         strings: ["JAVA DEVELOPER", "JS DEVELOPER", "PIANIST"],
         autoStart: true,
