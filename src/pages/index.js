@@ -10,7 +10,6 @@ import { LandingStyles } from "../components/styles"
 
 const Container = styled.div`
   margin: 3rem auto;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +39,7 @@ const IndexPage2 = () => (
 
 const TextContainer = ({ children }) => (
   <div style={{
-    padding: `1rem 4rem`,
+    padding: `1vw 6vw`,
     fontFamily: `'Muli', sans-serif`,
   }}>
     {children}
@@ -84,17 +83,29 @@ const Bar = ({ children }) => (
 const IntroBlockStyle = {
   background: "black",
   color: "white",
+/*
   height: "600px",
+*/
 }
 
 const Iam = () => (
-  <div style={{
-    fontSize: `5rem`,
-    marginTop: `7rem`,
+  <div><h1 style={{
+    color: "#d87679", fontFamily: `'Poppins', sans-serif`, marginTop: `4vw`,
+  }}>i am claudiu matei<MyDot>.</MyDot></h1>
 
-  }}>
+    <div style={{
+      fontSize: `5rem`,
+      lineHeight: `6vw`,
+      display: `flex`,
+      alignItems: `flex-end`,
+      minHeight: `200px`,
+
+    }}>
+      {/*
     <div style={{ float: `left` }}>I AM&nbsp;</div>
-    <Typewriter
+*/}
+      <div style={{ alignSelf: `normal`, fontWeight: `100`,fontSize:`5vw`,paddingBottom:`17vw` }}><p>I AM&nbsp;</p></div>
+      {/*<Typewriter
       style={{ float: `left` }}
       options={{
         strings: ["A DEVELOPER", "A PROUD HUSBAND", "A PIANO PLAYER"],
@@ -102,14 +113,36 @@ const Iam = () => (
         loop: true,
         delay: "natural",
       }}
-    />
+    />*/}
+      <div style={{ alignSelf: `normal`, fontWeight: `600`, fontSize:`5vw` }}>
+        <Typewriter
+          style={{ alignSelf: `normal` }}
+          onInit={(typewriter) => {
+            typewriter.typeString(`
+        <span>A DEVELOPER</span>
+        <br><span>IMAGINATIVE</span>
+        <br><span>A PROUD FIANCÉ</span>
+        <br><span>A PIANO PLAYER</span>
+        
+        `)
+              .callFunction(() => {
+                console.log("String typed out!")
+              })
+              // .pauseFor(6000000000)
+              // .deleteAll()
+              .callFunction(() => {
+                console.log("All strings were deleted")
+              })
+              .start()
+          }}
+        /></div>
+    </div>
   </div>
 )
 
 const IntroBlock = (children) => (
   <div style={IntroBlockStyle}>
     <TextContainer>
-      <h1 style={{ color: "#d87679", fontFamily: `'Poppins', sans-serif` }}>i am claudiu matei<MyDot>.</MyDot></h1>
       <Iam/>
     </TextContainer>
   </div>
@@ -119,7 +152,7 @@ const SkillBar = ({ name, procent }) => (
   <div style={{
     marginTop: "15px",
     fontSize: "0.7rem",
-    fontWeight: "lighter"
+    fontWeight: "lighter",
   }}>
     {name}
     <div className="meter">
